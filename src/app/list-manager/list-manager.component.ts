@@ -12,4 +12,7 @@ export class ListManagerComponent implements OnInit {
   ngOnInit() {
   }
 
+  logTextInput (val) {
+    console.log("inside parent:" + val);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , EventEmitter, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -8,13 +8,15 @@ import { FormControl } from '@angular/forms';
 })
 export class TextInputComponent implements OnInit {
   inputTextControl : FormControl;
+  @Output() textInputEmitter =  new EventEmitter<string>();
 
   ngOnInit() {
     this.inputTextControl = new FormControl();
+
     this.inputTextControl.valueChanges
       .subscribe(val => {
-        console.log(val);
+        // console.log(val);
+        this.textInputEmitter.emit(val);
       });
   }
-
 }
