@@ -11,6 +11,10 @@ export class TextInputComponent implements OnInit {
 
   ngOnInit() {
     this.inputTextControl = new FormControl();
+    this.inputTextControl.valueChanges
+      .subscribe(val => {
+        console.log(val);
+      });
   }
 
 }
