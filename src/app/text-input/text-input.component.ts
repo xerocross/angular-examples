@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-text-input',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./text-input.component.scss']
 })
 export class TextInputComponent implements OnInit {
-
-  constructor() { }
+  inputTextControl : FormControl;
 
   ngOnInit() {
+    this.inputTextControl = new FormControl();
   }
 
 }
