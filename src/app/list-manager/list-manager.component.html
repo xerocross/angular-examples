@@ -1,6 +1,4 @@
 <div>
     <app-text-input (textInputEmitter) = "textInputs$.next($event)"></app-text-input>
-    <ul>
-      <li *ngFor = "let item of inputValues">{{ item }}</li>
-    </ul>
+    <app-list-view [theList] = "inputValues"></app-list-view>
 </div>

@@ -4,12 +4,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { ListManagerComponent } from './list-manager/list-manager.component';
+import { ListViewComponent } from './list-view/list-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextInputComponent,
-    ListManagerComponent
+    ListManagerComponent,
+    ListViewComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule
