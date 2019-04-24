@@ -5,11 +5,13 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MobxAngularModule } from "mobx-angular";
 import { SequenceExplorerComponent } from './sequence-explorer/sequence-explorer.component';
+import { MyTestDirectiveDirective } from './my-test-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SequenceExplorerComponent
+    SequenceExplorerComponent,
+    MyTestDirectiveDirective
   ],
   imports: [
     BrowserModule, ReactiveFormsModule, FormsModule, MobxAngularModule
