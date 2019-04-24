@@ -2,18 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { observable, computed } from "mobx-angular";
 
+
 @Component({
-  selector: 'app-series-explorer',
-  templateUrl: './series-explorer.component.html',
-  styleUrls: ['./series-explorer.component.scss']
+  selector: 'app-sequence-explorer',
+  templateUrl: './sequence-explorer.component.html',
+  styleUrls: ['./sequence-explorer.component.scss']
 })
-export class SeriesExplorerComponent {
-  @observable seriesInput : string = "";
+export class SequenceExplorerComponent {
+
+  @observable sequenceInput : string = "";
   @observable otherVal : string = "";
 
   @computed get numberArray (): number[] {
     console.log("numberArray");
-    return this.seriesInput.split(/ *, */).map(v=> parseInt(v)).filter(v=> !isNaN(v));
+    return this.sequenceInput.split(/ *, */).map(v=> parseInt(v)).filter(v=> !isNaN(v));
   }
   @computed get ratios (): number[] {
     console.log("ratioArray");
@@ -31,4 +33,5 @@ export class SeriesExplorerComponent {
     }
     return differences;
   }
+
 }

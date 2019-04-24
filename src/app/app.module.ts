@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
-import { SeriesExplorerComponent } from './series-explorer/series-explorer.component';
 import { MobxAngularModule } from "mobx-angular";
+import { SequenceExplorerComponent } from './sequence-explorer/sequence-explorer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SeriesExplorerComponent
+    SequenceExplorerComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule, FormsModule, MobxAngularModule

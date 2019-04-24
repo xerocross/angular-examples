@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeriesExplorerComponent } from './series-explorer.component';
+import { SequenceExplorerComponent } from './sequence-explorer.component';
 
-describe('SeriesExplorerComponent', () => {
-  let component: SeriesExplorerComponent;
-  let fixture: ComponentFixture<SeriesExplorerComponent>;
+describe('SequenceExplorerComponent', () => {
+  let component: SequenceExplorerComponent;
+  let fixture: ComponentFixture<SequenceExplorerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SeriesExplorerComponent ]
+      declarations: [ SequenceExplorerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SeriesExplorerComponent);
+    fixture = TestBed.createComponent(SequenceExplorerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
