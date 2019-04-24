@@ -1,3 +1,24 @@
-<p>
-  series-explorer works!
-</p>
+<div *mobxAutorun>
+  <div>
+    <p>
+      <label>Series Input</label>
+    </p>
+    <p>
+      <input [(ngModel)]="seriesInput">
+    </p>
+  </div>
+  <div>
+    <p>
+      <label>Irrelevant Input</label>
+    </p>
+    <p>
+      <input [(ngModel)]="otherVal">
+    </p>
+  </div>
+  <p>
+    Ratios: {{ ratios.join(" , ") }}
+  </p>
+  <p>
+    Differences: {{ differences.join(" , ") }}
+  </p>
+</div>
