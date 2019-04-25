@@ -6,4 +6,7 @@
   <p>
     <input type = "text" [(ngModel)]="mySequenceString" (ngModelChange) = "processSequenceString($event)">
   </p>
+  <p>
+    Ratios: {{ ratios.join(" , ") }}
+  </p>
 </div>

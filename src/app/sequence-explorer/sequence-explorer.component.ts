@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SequenceExplorerComponent /* implements OnInit */ {
   mySequenceString : string = "";
-  _mySequence : number[];
+  _mySequence : number[] = [];
 
   // constructor() { }
   // ngOnInit() {
@@ -22,4 +22,13 @@ export class SequenceExplorerComponent /* implements OnInit */ {
     console.log(arr);
     this._mySequence = arr;
   }
+
+  get ratios (): number[] {
+    console.log("ratios was computed");
+    let ratios = []
+    for (let i = 0; i < this._mySequence.length - 1; i++) {
+      ratios.push(this._mySequence[i+1] / this._mySequence[i])
+    }
+    return ratios;
+  } 
 }
