@@ -7,6 +7,12 @@
     <input type = "text" [(ngModel)]="mySequenceString" (ngModelChange) = "processSequenceString($event)">
   </p>
   <p>
+    <label>Extraneous Input: (type anything here)</label>
+  </p>
+  <p>
+      <input type = "text" [(ngModel)]="extraneousVariable">
+  </p>
+  <p>
     Ratios: {{ ratios.join(" , ") }}
   </p>
 </div>

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class SequenceExplorerComponent /* implements OnInit */ {
   mySequenceString : string = "";
   _mySequence : number[] = [];
-
+  extraneousVariable: string = "";
   // constructor() { }
   // ngOnInit() {
   // }
