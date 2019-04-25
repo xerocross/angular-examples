@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { observable, computed } from 'mobx'
 
 @Component({
   selector: 'app-sequence-explorer',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SequenceExplorerComponent /* implements OnInit */ {
   mySequenceString : string = "";
-  _mySequence : number[] = [];
+  @observable _mySequence : number[] = [];
   extraneousVariable: string = "";
   // constructor() { }
   // ngOnInit() {
@@ -30,5 +31,14 @@ export class SequenceExplorerComponent /* implements OnInit */ {
       ratios.push(this._mySequence[i+1] / this._mySequence[i])
     }
     return ratios;
-  } 
+  }
+
+  @computed get differences () : number [] {
+    console.log("differences was computed");
+    let diffs = []
+    for (let i = 0; i < this._mySequence.length - 1; i++) {
+      diffs.push(this._mySequence[i+1] - this._mySequence[i])
+    }
+    return diffs;
+  }
 }
