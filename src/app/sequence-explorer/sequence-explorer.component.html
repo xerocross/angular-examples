@@ -4,6 +4,6 @@
     <label>Enter a Sequence of Numbers (comma separated)</label>
   </p>
   <p>
-    <input type = "text" [(ngModel)]="mySequenceString">
+    <input type = "text" [(ngModel)]="mySequenceString" (ngModelChange) = "processSequenceString($event)">
   </p>
 </div>
