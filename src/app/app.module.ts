@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { SequenceExplorerComponent } from './sequence-explorer/sequence-explorer.component';
 
@@ -10,7 +10,7 @@ import { SequenceExplorerComponent } from './sequence-explorer/sequence-explorer
     SequenceExplorerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
