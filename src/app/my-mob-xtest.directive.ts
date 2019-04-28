@@ -22,13 +22,13 @@ export class MyMobXTestDirective implements OnInit, OnDestroy {
 
     this.view = this.viewContainer.createEmbeddedView(this.templateRef);
 
-    // detectChanges = ()=> {
-    //   this.view.detectChanges();
-    // }
-    console.log(this.view.rootNodes[0]);
+    this.view.detectChangesDebug = () => {
+      console.log("detect changes");
+      this.view.detectChanges();
+    }
     this.view.rootNodes[0].addEventListener("click", () => {
       console.log("click");
-      this.view.detectChanges();
+      this.view.detectChangesDebug();
     })
     if (this.dispose) this.dispose();
 
@@ -52,7 +52,7 @@ export class MyMobXTestDirective implements OnInit, OnDestroy {
     this.dispose = autorun(
       () => {
         console.log("autorun");
-        view['detectChanges']();
+        view.detectChangesDebug();
       },
       { name: autorunName }
     );
