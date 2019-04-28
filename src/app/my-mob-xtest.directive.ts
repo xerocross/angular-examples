@@ -15,10 +15,21 @@ export class MyMobXTestDirective implements OnInit, OnDestroy {
     protected renderer: Renderer) {
     }
 
+
+
   ngOnInit() {
     console.log("ng-init");
+
     this.view = this.viewContainer.createEmbeddedView(this.templateRef);
 
+    // detectChanges = ()=> {
+    //   this.view.detectChanges();
+    // }
+    console.log(this.view.rootNodes[0]);
+    this.view.rootNodes[0].addEventListener("click", () => {
+      console.log("click");
+      this.view.detectChanges();
+    })
     if (this.dispose) this.dispose();
 
     if (this.shouldDetach()) {
